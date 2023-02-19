@@ -8,9 +8,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 @SpringBootApplication
 @RequiredArgsConstructor
+@EnableDiscoveryClient
+@RefreshScope
 public class MsLoanApplication implements CommandLineRunner {
 
     private final LoanRepository loanRepository;
